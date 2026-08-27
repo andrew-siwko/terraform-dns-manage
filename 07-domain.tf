@@ -16,10 +16,10 @@ resource "linode_domain" "dns_zone" {
 }
 
 # Records for the public IP addresses.
-resource "linode_domain_record" "kcontrol01_a_record" {
+resource "linode_domain_record" "proxmox_a_record" {
   domain_id   = linode_domain.dns_zone.id
-  name        = "kcontrol01"
+  name        = "proxmox"
   record_type = "A"
   ttl_sec     = 5
-  target      = "192.168.51.109"
+  target      = "192.168.50.183"
 }
