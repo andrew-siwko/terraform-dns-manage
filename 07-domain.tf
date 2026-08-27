@@ -23,3 +23,11 @@ resource "linode_domain_record" "proxmox_a_record" {
   ttl_sec     = 5
   target      = "192.168.50.183"
 }
+
+resource "linode_domain_record" "kcontrol01_a_record" {
+  domain_id   = linode_domain.dns_zone.id
+  name        = "kcontrol01"
+  record_type = "A"
+  ttl_sec     = 5
+  target      = "192.168.50.160"
+}
