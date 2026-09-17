@@ -31,3 +31,27 @@ resource "linode_domain_record" "kcontrol01_a_record" {
   ttl_sec     = 5
   target      = "192.168.50.160"
 }
+
+resource "linode_domain_record" "kcontrol_a_record" {
+  domain_id   = linode_domain.dns_zone.id
+  name        = "kcontrol"
+  record_type = "A"
+  ttl_sec     = 5
+  target      = "192.168.50.155"
+}
+
+resource "linode_domain_record" "kcontrol02_a_record" {
+  domain_id   = linode_domain.dns_zone.id
+  name        = "kcontrol02"
+  record_type = "A"
+  ttl_sec     = 5
+  target      = "192.168.50.160"
+}
+
+resource "linode_domain_record" "kcontrol03_a_record" {
+  domain_id   = linode_domain.dns_zone.id
+  name        = "kcontrol03"
+  record_type = "A"
+  ttl_sec     = 5
+  target      = "192.168.50.160"
+}
