@@ -45,7 +45,7 @@ resource "linode_domain_record" "kcontrol02_a_record" {
   name        = "kcontrol02"
   record_type = "A"
   ttl_sec     = 5
-  target      = "192.168.50.160"
+  target      = "192.168.50.156"
 }
 
 resource "linode_domain_record" "kcontrol03_a_record" {
@@ -53,5 +53,5 @@ resource "linode_domain_record" "kcontrol03_a_record" {
   name        = "kcontrol03"
   record_type = "A"
   ttl_sec     = 5
-  target      = "192.168.50.160"
+  target      = "192.168.50.157"
 }
