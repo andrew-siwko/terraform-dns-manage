@@ -55,3 +55,11 @@ resource "linode_domain_record" "kcontrol03_a_record" {
   ttl_sec     = 5
   target      = "192.168.50.157"
 }
+
+resource "linode_domain_record" "kcontrol04_a_record" {
+  domain_id   = linode_domain.dns_zone.id
+  name        = "kcontrol04"
+  record_type = "A"
+  ttl_sec     = 5
+  target      = "192.168.50.158"
+}
