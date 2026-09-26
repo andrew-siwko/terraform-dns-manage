@@ -40,21 +40,22 @@ resource "linode_domain_record" "kcontrol_a_record" {
   target      = "192.168.50.155"
 }
 
-resource "linode_domain_record" "kcontrol02_a_record" {
-  domain_id   = linode_domain.dns_zone.id
-  name        = "kcontrol02"
-  record_type = "A"
-  ttl_sec     = 5
-  target      = "192.168.50.156"
-}
+# these are managed by the proxmox terraform code
+# resource "linode_domain_record" "kcontrol02_a_record" {
+#   domain_id   = linode_domain.dns_zone.id
+#   name        = "kcontrol02"
+#   record_type = "A"
+#   ttl_sec     = 5
+#   target      = "192.168.50.156"
+# }
 
-resource "linode_domain_record" "kcontrol03_a_record" {
-  domain_id   = linode_domain.dns_zone.id
-  name        = "kcontrol03"
-  record_type = "A"
-  ttl_sec     = 5
-  target      = "192.168.50.157"
-}
+# resource "linode_domain_record" "kcontrol03_a_record" {
+#   domain_id   = linode_domain.dns_zone.id
+#   name        = "kcontrol03"
+#   record_type = "A"
+#   ttl_sec     = 5
+#   target      = "192.168.50.157"
+# }
 
 resource "linode_domain_record" "kcontrol04_a_record" {
   domain_id   = linode_domain.dns_zone.id
